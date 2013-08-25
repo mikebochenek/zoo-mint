@@ -21,6 +21,7 @@ import org.junit.Test;
  */
 public class RomanNumerals {
 
+	// none of these are used, and they are a bad idea because they make the code longer
 	final String one = "I";
 	final String five = "V";
 	final String ten = "X";
@@ -28,7 +29,11 @@ public class RomanNumerals {
 	final String hundred = "C";
 	final String fiveHundred = "D";
 	final String thousand = "M";
+	
 
+	/**
+	 * very primitive approach, but could we do better?
+	 */
 	private String convert(int y) {
 		String s = "";
 		

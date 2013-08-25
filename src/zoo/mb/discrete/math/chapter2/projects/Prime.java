@@ -6,10 +6,14 @@ import org.junit.Test;
 
 /**
  * page 164 of Discrete Mathematics and Its Applications by Kenneth H. Rosen
- * 6. Given a positive integer, determine whether it is prime.
+ * question #6. Given a positive integer, determine whether it is prime.
  */
 public class Prime {
 
+	/**
+	 * It'd be fun to more optimizations here 
+	 * for example, we could stop at sqrt(x) and keep a map of primes
+	 */
 	public boolean isPrime(long x) {
 		for (int i = 2; i < x; i += 2) {
 			if (x % i == 0) {
