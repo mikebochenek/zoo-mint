@@ -36,12 +36,43 @@ import org.junit.Test;
  * Constraints
  * -	N will be between 1 and 2,000, inclusive.
  * -	badStep will be between 1 and 4,000,000, inclusive. 
+ *
+ * http://community.topcoder.com/stat?c=problem_statement&pm=12300&rd=15699
  */
 public class JumpFurther {
 
+	public int furthest(int N, int badStep) {
+		return 1;
+	}
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void test0() {
+		assertEquals(3, furthest(2, 2));
+		// The optimal strategy is to jump upwards twice: from step 0 to step 1, 
+		// and then from step 1 to step 3. This trajectory avoids the broken step.
+	}
+
+	@Test 
+	public void test1() {
+		assertEquals(2, furthest(2, 1));
+		// In this case step 1 is broken, so Jiro cannot jump upwards as his 
+		// first action. The optimal strategy is to first stay on step 0, 
+		// and then to jump from step 0 to step 2.
+	}
+	
+	@Test 
+	public void test2() {
+		assertEquals(5, furthest(3, 3));
+	}
+	
+	@Test 
+	public void test3() {
+		assertEquals(862641, furthest(1313, 5858));
+	}
+	
+	@Test
+	public void test4() {
+		assertEquals(1, furthest(1, 757065));
 	}
 
 }
