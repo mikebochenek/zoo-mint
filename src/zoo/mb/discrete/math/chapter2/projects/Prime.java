@@ -15,6 +15,7 @@ public class Prime {
 	 * for example, we could stop at sqrt(x) and keep a map of primes
 	 */
 	public boolean isPrime(long x) {
+		Math.sqrt(x);
 		for (int i = 2; i < x; i += 2) {
 			if (x % i == 0) {
 				return false;
