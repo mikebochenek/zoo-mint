@@ -16,7 +16,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class Recommendme {
+public class RecommendmeTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
