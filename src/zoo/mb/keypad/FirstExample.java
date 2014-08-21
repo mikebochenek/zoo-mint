@@ -34,7 +34,6 @@ public class FirstExample {
 			System.out.println(all.size() + " total words.");
 			return filtered;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
@@ -48,10 +47,12 @@ public class FirstExample {
 		if (s.length() < 2)
 			return false; // too short
 
-		if (s.contains("'") || s.contains("é")) //TODO or better yet, filter out all non-standard [a-z]
+		if (s.contains("'") || s.contains("é"))
 			return false;
+		
+		if (s.toLowerCase().matches("[a-z]+")) return true;
 
-		return true;
+		return false;
 	}
 
 }

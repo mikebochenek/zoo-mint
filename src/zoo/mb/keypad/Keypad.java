@@ -44,7 +44,7 @@ public class Keypad {
 			for (int j = 0; j < pad[idx].length; j++) {
 				result[i] = pad[idx][j];
 				all.add(new String(result));
-			}
+			} //TODO  the problem here is that we are just doing 7x3 instead of all possible combinations (recurisevely?)
 		}
 		
 		return all;
