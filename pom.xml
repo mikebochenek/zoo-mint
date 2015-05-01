@@ -22,6 +22,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 
 				<configuration>
+				    <excludes>
+                       <exclude>test/**</exclude>
+                    </excludes>
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
@@ -60,6 +63,13 @@
 			<artifactId>junit</artifactId>
 			<version>4.8.1</version>
 		</dependency>
+		
+		<dependency>
+	        <groupId>com.google.guava</groupId>
+	        <artifactId>guava</artifactId>
+	        <version>r05</version>
+        </dependency>
+		
 
 	</dependencies>
 </project>
