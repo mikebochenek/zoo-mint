@@ -45,7 +45,8 @@ public class ArrayTest {
 		int idx;
 	}
 
-    static int maxDifference(int[] a) {
+
+	static int maxDifference(int[] a) {
     	Map<Integer,Integer> map = new HashMap<Integer,Integer>();
     	for (int i = 0; i < a.length; i++) {
 			map.put(a[i], i);
