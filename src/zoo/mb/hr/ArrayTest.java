@@ -56,7 +56,6 @@ public class ArrayTest {
     	
     	for (Iterator iterator = c.iterator(); iterator.hasNext();) {
 			Integer integer = (Integer) iterator.next();
-			if (integer - )
 		}
     	
     	int diff = -1;
