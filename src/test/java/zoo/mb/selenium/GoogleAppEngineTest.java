@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -28,7 +29,7 @@ public class GoogleAppEngineTest {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+  @Ignore @Test
   public void testGoogleApp() throws Exception {
     driver.get("http://7-notes.appspot.com/");
     // Warning: verifyTextPresent may require manual changes
