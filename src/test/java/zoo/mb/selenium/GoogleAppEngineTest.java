@@ -32,14 +32,12 @@ public class GoogleAppEngineTest {
   @Ignore @Test
   public void testGoogleApp() throws Exception {
     driver.get("http://7-notes.appspot.com/");
-    // Warning: verifyTextPresent may require manual changes
     try {
       assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]* free secure online clipboard[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     driver.get("http://cryptools.appspot.com/");
-    // Warning: verifyTextPresent may require manual changes
     try {
       assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*70ee1738b6b21e2c8a43f3a5ab0eee71[\\s\\S]*$"));
     } catch (Error e) {
