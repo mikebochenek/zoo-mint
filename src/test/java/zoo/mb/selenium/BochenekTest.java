@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -28,7 +29,7 @@ public class BochenekTest {
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test
+  @Ignore @Test
   public void testBochenek() throws Exception {
     driver.get("http://www.bochenek.ca");
     // Warning: verifyTextPresent may require manual changes
