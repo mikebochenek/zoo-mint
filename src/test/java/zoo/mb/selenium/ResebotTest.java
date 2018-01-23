@@ -28,7 +28,7 @@ public class ResebotTest {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test
+	@Ignore @Test
 	public void testAPIRecordings() throws Exception {
 		driver.get(baseUrl + "/api/recordings");
 		try {
@@ -40,7 +40,7 @@ public class ResebotTest {
 		}
 	}
 
-	@Test
+	@Ignore @Test
 	public void testAPIPrompts() throws Exception {
 		driver.get(baseUrl + "/api/prompts");
 		try {
