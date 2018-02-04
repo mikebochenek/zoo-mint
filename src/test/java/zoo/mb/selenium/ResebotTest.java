@@ -32,7 +32,6 @@ public class ResebotTest {
 	public void testAPIRecordings() throws Exception {
 		driver.get(baseUrl + "/api/recordings");
 		try {
-			//System.out.println(driver.getPageSource());
 			assertTrue(driver.getPageSource().contains("\"id\":"));
 		} catch (Error e) {
 			fail(e.getMessage());
