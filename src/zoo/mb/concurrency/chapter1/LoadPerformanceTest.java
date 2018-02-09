@@ -37,11 +37,6 @@ public class LoadPerformanceTest implements Runnable {
 	@Override
 	public void run() {
 		long start = System.nanoTime(); // A nanosecond (ns) is an SI unit of time equal to one billionth of a second (10−9 or 1/1,000,000,000 s).
-		/*
-		curl("http://presto.bochenek.ch/api/restdishes/17,1");
-		curl("http://presto.bochenek.ch/api/getlikes/36");
-		curl("http://presto.bochenek.ch/api/settings/1");
-		*/
 		curl("http://localhost:9000/api/recommend?id=1&longitude=47.3921582785799&latitude=8.512902108369&minPrice=0&maxPrice=150&maxDistance=20.0&openNow=false&maxDishes=15");
 		curl("http://localhost:9000/api/restdishes/17,1");
 		curl("http://localhost:9000/api/getlikes/36");
@@ -62,7 +57,6 @@ public class LoadPerformanceTest implements Runnable {
 			String inputLine;
 
 			while ((inputLine = in.readLine()) != null) {
-				//System.out.println(inputLine);
 			}
 			in.close();
 		} catch (Exception e) {
