@@ -29,6 +29,7 @@ public class ResebotTest {
 	}
 
 	@Test
+	@Ignore
 	public void testAPIRecordings() throws Exception {
 		driver.get(baseUrl + "/api/recordings");
 		try {
@@ -40,6 +41,7 @@ public class ResebotTest {
 	}
 
 	@Test
+	@Ignore
 	public void testAPIPrompts() throws Exception {
 		driver.get(baseUrl + "/api/prompts");
 		try {
