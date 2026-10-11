@@ -1,8 +1,7 @@
 # Zoo Mint
 
 Zoo Mint is a Java 17 Maven project with a Spring Boot web application. The
-application currently starts an embedded web server; API endpoints can be added
-as the project grows.
+application starts an embedded web server and provides a status API.
 
 ## Run the application
 
@@ -12,8 +11,22 @@ From the project root, start the application with Maven:
 mvn spring-boot:run
 ```
 
-The server listens on [http://localhost:8088](http://localhost:8088). No API
-endpoints are configured yet.
+The server listens on [http://localhost:8088](http://localhost:8088).
+
+## Status API
+
+`GET http://localhost:8088/api/status` returns the application start time, Java
+version, and JVM heap memory values in bytes. For example:
+
+```json
+{
+  "serverStartTime": "2026-10-11T06:00:00Z",
+  "javaVersion": "17.0.14",
+  "freeMemoryBytes": 123456789,
+  "totalMemoryBytes": 234881024,
+  "maxMemoryBytes": 4294967296
+}
+```
 
 To build and run the executable JAR instead:
 
