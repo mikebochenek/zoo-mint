@@ -28,11 +28,41 @@ public class StatusController {
 				runtime.maxMemory());
 	}
 
-	public record StatusResponse(
-			Instant serverStartTime,
-			String javaVersion,
-			long freeMemoryBytes,
-			long totalMemoryBytes,
-			long maxMemoryBytes) {
+	public static class StatusResponse {
+
+		private final Instant serverStartTime;
+		private final String javaVersion;
+		private final long freeMemoryBytes;
+		private final long totalMemoryBytes;
+		private final long maxMemoryBytes;
+
+		public StatusResponse(Instant serverStartTime, String javaVersion, long freeMemoryBytes,
+				long totalMemoryBytes, long maxMemoryBytes) {
+			this.serverStartTime = serverStartTime;
+			this.javaVersion = javaVersion;
+			this.freeMemoryBytes = freeMemoryBytes;
+			this.totalMemoryBytes = totalMemoryBytes;
+			this.maxMemoryBytes = maxMemoryBytes;
+		}
+
+		public Instant getServerStartTime() {
+			return serverStartTime;
+		}
+
+		public String getJavaVersion() {
+			return javaVersion;
+		}
+
+		public long getFreeMemoryBytes() {
+			return freeMemoryBytes;
+		}
+
+		public long getTotalMemoryBytes() {
+			return totalMemoryBytes;
+		}
+
+		public long getMaxMemoryBytes() {
+			return maxMemoryBytes;
+		}
 	}
 }

@@ -1,6 +1,6 @@
 # Zoo Mint
 
-Zoo Mint is a Java 17 Maven project with a Spring Boot web application. The
+Zoo Mint is a Java 8 Maven project with a Spring Boot web application. The
 application starts an embedded web server and provides a status API.
 
 ## Run the application
@@ -60,7 +60,7 @@ version, and JVM heap memory values in bytes. For example:
 ```json
 {
   "serverStartTime": "2026-10-11T06:00:00Z",
-  "javaVersion": "17.0.14",
+  "javaVersion": "1.8.0_402",
   "freeMemoryBytes": 123456789,
   "totalMemoryBytes": 234881024,
   "maxMemoryBytes": 4294967296
@@ -76,8 +76,8 @@ java -jar target/zoo-mint-1.0-SNAPSHOT.jar
 
 ## Requirements
 
-- JDK 17 or newer
-- Maven 3.6.3 or newer
+- JDK 8 or newer
+- Maven 3.6.0 or newer
 
 The existing Java sources remain under `src/zoo`; Maven is configured to compile
 them from that source root. Application configuration is under
