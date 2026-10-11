@@ -3,6 +3,9 @@
 Zoo Mint is a Java 8 Maven project with a Spring Boot web application. The
 application starts an embedded web server and provides a status API.
 
+Originally started as command line collection of tools **but** recently
+used copilot (gpt-6-luna) to convert to Spring Boot.
+
 ## Run the application
 
 From the project root, start the application with Maven:
